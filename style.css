@@ -1,3 +1,9 @@
 body {
     margin: 20px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.group-weather {
+    margin: 20px;
 }
