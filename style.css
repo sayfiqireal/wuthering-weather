@@ -1,9 +1,53 @@
 body {
     margin: 20px;
     font-family: Montserrat;
-    font-weight: 500;
+}
+
+.bg-image {
+    background-image: url("https://img.freepik.com/free-photo/white-cloud-blue-sky_1203-9447.jpg?t=st=1741781229~exp=1741784829~hmac=9719ac1cb36c5df6b7b82bd98c0bacb780e93499f725df504a9528550930e258&w=1060");
+    /* filter: blur(8px); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
+
+.container-fluid {
+    justify-content: end;
 }
 
 .group-weather {
     margin: 20px;
+}
+
+.navbar{
+    background: none !important;
+    font-weight: bold;
+}
+
+.nama-web {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #f6f4f1;
+    text-shadow: 8px;
+    margin-top: 200px;
+}
+
+.nama-daerah {
+
+}
+
+.group-weather {
+    height: 300px;
+}
+
+.card {
+    
+}
+
+.clear {
+    filter: none;
 }
