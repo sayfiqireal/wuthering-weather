@@ -2,7 +2,12 @@ const daerah = document.getElementById('daerah')
 const search = document.getElementById('search')
 const update = document.getElementById('cari')
 
-const URL = 'https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&daily=weather_code,temperature_2m_min,temperature_2m_max&current=temperature_2m,is_day,weather_code'
+const URL = 'https://api.open-meteo.com/v1/forecast?latitude=-7.8014&longitude=110.3647&daily=weather_code,temperature_2m_min,temperature_2m_max&current=temperature_2m,is_day,apparent_temperature'
+
+
+const WEATHER_ICON = {
+  95: 'https://weather-sense.leftium.com/icons/airy/thunderstorm@4x.png',
+}
 
 const days = document.querySelector('#days');
 
@@ -31,7 +36,7 @@ const fetchWeather = async () => {
               <div class="card-body">
                 <h5 class="card-title">${
                   json.daily.temperature_2m_max[idx]
-                }&#8451; <img src="" width="50"/></h5>
+                }&#8451; <img src="${WEATHER_ICON}" width="50"/></h5>
                 <p class="card-text">${formattedDate(json.daily.time[idx])}</p>
               </div>
             </div>
