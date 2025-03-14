@@ -18,63 +18,70 @@
           <a class="navbar-brand">Wuthering Weather</a>
         </div>
       </nav>
-      <h1 class="daerah">
+      <form class=" search-bar d-flex flex-row justify-content-center" role="search">
+        <input id="search" class="form-control me-2" type="search" placeholder="Cari Daerah" aria-label="Search">
+        <button id="cari" class="btn btn-outline-success" type="submit">Cari</button>
+      </form>
+      <h1 id="daerah">
         Tokyo
       </h1>
-      <form class="d-flex flex-row justify-content-center" role="search">
-        <input class="form-control me-2 search" type="search" placeholder="Cari Daerah" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Cari</button>
-      </form>
+      <div class="props">
+
+      </div>
       <div class jam>
 
       </div>
-      <div class="group-weather d-flex flex-row flex-wrap justify-content-center align-items-end">
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">cuaca</h5>
-            <p class="card-text">suhu</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">cuaca</h5>
-            <p class="card-text">suhu</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">cuaca</h5>
-            <p class="card-text">suhu</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">cuaca</h5>
-            <p class="card-text">suhu</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">cuaca</h5>
-            <p class="card-text">suhu</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">cuaca</h5>
-            <p class="card-text">suhu</p>
-          </div>
-        </div>
+      <div class="content">
+        <div class="group-weather row" id="days"></div>
       </div>
-      <footer>copyright</footer>
+      <!-- <div class="group-weather d-flex flex-row flex-wrap align-items-end">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="d1">
+          <div class="card-body">
+            <h5 class="card-title">hari</h5>
+            <p class="card-text">suhu</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="d2">
+          <div class="card-body">
+            <h5 class="card-title">hari</h5>
+            <p class="card-text">suhu</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="d3">
+          <div class="card-body">
+            <h5 class="card-title">hari</h5>
+            <p class="card-text">suhu</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="d4">
+          <div class="card-body">
+            <h5 class="card-title">hari</h5>
+            <p class="card-text">suhu</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="d5">
+          <div class="card-body">
+            <h5 class="card-title">hari</h5>
+            <p class="card-text">suhu</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="d6">
+          <div class="card-body">
+            <h5 class="card-title">hari</h5>
+            <p class="card-text">suhu</p>
+          </div>
+        </div>
+      </div> -->
+      <footer>copyright sayfiqireal</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 </html>
