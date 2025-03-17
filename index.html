@@ -1,3 +1,7 @@
+<!-- NOTES -->
+<!-- FUNCTION WONT WORK, ALWAYS RESET -->
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,22 +30,24 @@
       </div>
     </nav>
     <h1 id="daerah">Yogyakarta</h1>
-    <form
+    <div
       class="d-flex flex-row justify-content-center"
       role="search"
     >
       <input
-        id="search"
+        id="search-bar"
         class="form-control me-2"
         type="search"
         placeholder="Cari Daerah"
         aria-label="Search"
       />
-      <button id="cari" class="btn btn-outline-success" type="submit">
+      <button id="cari" class="btn btn-outline-success" onclick="getCoordinate()">
         Cari
       </button>
-      <!-- tambah button lokasi sekarang -->
-    </form>
+      <button id="lokasi" class="btn btn-outline-success" onclick="getLocation()">
+        <img src="https://img.icons8.com/?size=50&id=3723&format=png" alt="location">
+      </button>
+    </div>
 
     <div class="waktu"></div>
     <div id="current-weather"></div>
@@ -51,7 +57,7 @@
           <div class="card bg-gradient">
             <div class="card-body">
               <div class="container px-4 py-5">
-                <h2 class="pb-2 border-bottom">Today Highlight</h2>
+                <h2 class="pb-2 border-bottom" id="nama-kota">Today Highlight</h2>
 
                 <div
                   class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5"
