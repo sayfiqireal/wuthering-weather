@@ -6,6 +6,12 @@ const currentWeather = document.getElementById("current-weather");
 const hariNow = document.getElementById("hari-now")
 const jam = document.getElementById("jam")
 const suhuNow = document.getElementById("suhu-now")
+const iconNow = document.getElementById("current-icon")
+const windSpeed = document.getElementById("wind-speed")
+const pressure = document.getElementById("pressure")
+const windDir = document.getElementById("wind-direction")
+const humidity = document.getElementById("humidity")
+
 
 const formattedDate = (date) => {
   const options = {
@@ -48,6 +54,14 @@ const fetchWeather = async () => {
     hariNow.innerText = formattedDate(data.current.time);
     jam.innerText = formattedHours(data.current.time);
     suhuNow.innerText = data.current.apparent_temperature + ' °C';
+    windSpeed.innerText = data.current.wind_speed_10m;
+    pressure.innerText = data.current.surface_pressure;
+    windDir.innerText = data.current.wind_direction_10m;
+    humidity.innerText = data.current.relative_humidity_2m;
+
+    iconNow.innerHTML = `<img src="${
+      WMO[data.current.weather_code].day.image
+    }"/>`
 
     days.innerHTML = "";
 
@@ -56,11 +70,15 @@ const fetchWeather = async () => {
         <div class="col-2">
           <div class="card text-center mb-3" style="min-height: 300px;">
             <div class="card-body d-flex flex-column justify-content-between">
-              <h5 class="card-title">Sab, 12 Mar 2025</h5>
-              <img src="https://weather-sense.leftium.com/icons/airy/clear@4x.png" alt="" width="80" style="margin: 0 auto;">
-              <span class="card-text">rain</span>
+              <h5 class="card-title">${formattedShortDate(data.daily.time[i])}</h5>
+              <img src="${
+                WMO[data.daily.weather_code[i]].day.image
+              }" alt="" width="80" style="margin: 0 auto;">
+              <span class="card-text">${
+                WMO[data.daily.weather_code[i]].day.description
+              }</span>
               <div class="d-flex justify-content-between" style="">
-                <span id="min-suhu">12°C</span>
+                <span id="min-suhu">${data.daily.apparent_temperature_min[i]} °C</span>
                 <span id="max-suhu">${data.daily.apparent_temperature_max[i]} °C</span>
               </div>
             </div>

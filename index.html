@@ -27,7 +27,7 @@
     </nav>
     <h1 id="daerah">Yogyakarta</h1>
     <form
-      class="search-bar d-flex flex-row justify-content-center"
+      class="d-flex flex-row justify-content-center"
       role="search"
     >
       <input
@@ -40,6 +40,7 @@
       <button id="cari" class="btn btn-outline-success" type="submit">
         Cari
       </button>
+      <!-- tambah button lokasi sekarang -->
     </form>
 
     <div class="waktu"></div>
@@ -58,7 +59,7 @@
                   <div class="col d-flex flex-column align-items-start gap-2">
                     <div class="container">
                       <div class="row">
-                        <div class="col-6">
+                        <div class="col-6 ">
                           <p class="mb-0" id="hari-now">Sabtu, 12 Januari 2025</p>
                           <p class="mb-0" id="jam">15:00</p>
                           <h2 id="suhu-now"
@@ -68,7 +69,7 @@
                             32°C
                           </h2>
                         </div>
-                        <div class="col-6">b</div>
+                        <div class="col-6 d-flex flex-row justify-content-center align-items-center" id="current-icon">b</div>
                       </div>
                     </div>
                   </div>
@@ -84,11 +85,10 @@
                           </svg>
                         </div>
                         <h4 class="fw-semibold mb-0 text-body-emphasis">
-                          Featured title
+                          Wind Speed
                         </h4>
-                        <p class="text-body-secondary">
-                          Paragraph of text beneath the heading to explain the
-                          heading.
+                        <p class="text-body-secondary" id="wind-speed">
+                          null
                         </p>
                       </div>
 
@@ -101,11 +101,10 @@
                           </svg>
                         </div>
                         <h4 class="fw-semibold mb-0 text-body-emphasis">
-                          Featured title
+                          Surface Pressure
                         </h4>
-                        <p class="text-body-secondary">
-                          Paragraph of text beneath the heading to explain the
-                          heading.
+                        <p class="text-body-secondary" id="pressure">
+                          null
                         </p>
                       </div>
 
@@ -117,12 +116,11 @@
                             <use xlink:href="#speedometer"></use>
                           </svg>
                         </div>
-                        <h4 class="fw-semibold mb-0 text-body-emphasis">
-                          Featured title
+                        <h4 class="fw-semibold mb-0 text-body-emphasis" >
+                          Wind Direction
                         </h4>
-                        <p class="text-body-secondary">
-                          Paragraph of text beneath the heading to explain the
-                          heading.
+                        <p class="text-body-secondary" id="wind-direction">
+                          null
                         </p>
                       </div>
 
@@ -135,11 +133,10 @@
                           </svg>
                         </div>
                         <h4 class="fw-semibold mb-0 text-body-emphasis">
-                          Featured title
+                          Humidity
                         </h4>
-                        <p class="text-body-secondary">
-                          Paragraph of text beneath the heading to explain the
-                          heading.
+                        <p class="text-body-secondary" id="humidity">
+                          null
                         </p>
                       </div>
                     </div>
@@ -160,6 +157,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="wmo.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
