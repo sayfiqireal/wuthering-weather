@@ -9,6 +9,7 @@ const pressure = document.getElementById("pressure");
 const windDir = document.getElementById("wind-direction");
 const humidity = document.getElementById("humidity");
 
+
 const cityName = document.getElementById("nama-kota");
 const cari = document.getElementById("search-bar");
 
@@ -58,6 +59,7 @@ const getWeather = async (latitude, longitude) => {
   pressure.innerText = data.current.surface_pressure + ' hPa';
   windDir.innerText = data.current.wind_direction_10m + ' °';
   humidity.innerText = data.current.relative_humidity_2m + ' %';
+  // desc.innerText = WHO[data.current.weather_code].day.image;
 
   iconNow.innerHTML = `<img src="${
     WMO[data.current.weather_code].day.image
@@ -68,7 +70,7 @@ const getWeather = async (latitude, longitude) => {
   for (let i = 1; i < data.daily.weather_code.length; i++) {
     days.innerHTML += `
         <div class="col-2">
-          <div class="card text-center mb-3" style="min-height: 300px;">
+          <div class="card text-center mb-3 bg-black bg-opacity-50 text-white" style="min-height: 300px;">
             <div class="card-body d-flex flex-column justify-content-between">
               <h5 class="card-title">${formattedShortDate(
                 data.daily.time[i]
