@@ -8,6 +8,7 @@ const windSpeed = document.getElementById("wind-speed");
 const pressure = document.getElementById("pressure");
 const windDir = document.getElementById("wind-direction");
 const humidity = document.getElementById("humidity");
+const desc = document.getElementById("desc-now")
 
 
 const cityName = document.getElementById("nama-kota");
@@ -59,11 +60,16 @@ const getWeather = async (latitude, longitude) => {
   pressure.innerText = data.current.surface_pressure + ' hPa';
   windDir.innerText = data.current.wind_direction_10m + ' °';
   humidity.innerText = data.current.relative_humidity_2m + ' %';
-  // desc.innerText = WHO[data.current.weather_code].day.image;
+  // desc.innerText = WHO[data.current.weather_code].day.description;
 
-  iconNow.innerHTML = `<img src="${
-    WMO[data.current.weather_code].day.image
-  }"/>`;
+  iconNow.innerHTML = `
+  <div class="col d-flex flex-column justify-content-center">
+    <img src="${
+      WMO[data.current.weather_code].day.image
+    }" width="250px"/>
+    <span class="text-center" style="font-size: 30px; font-weight: bold;">${WMO[data.current.weather_code].day.description}</span>
+  </div>
+  `;
 
   days.innerHTML = "";
 
