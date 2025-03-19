@@ -1,7 +1,6 @@
 <!-- NOTES -->
 <!-- FUNCTION WONT WORK, ALWAYS RESET -->
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,39 +23,53 @@
   </head>
 
   <body class="bg-image">
-    <nav class="navbar bg-body-tertiary">
+    <!-- <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand">Wuthering Weather</a>
       </div>
-    </nav>
-    <div
-      class="d-flex flex-row justify-content-center"
-      role="search"
-    >
-      <input
-        id="search-bar"
-        class="form-control me-2"
-        type="search"
-        placeholder="Cari Daerah"
-        aria-label="Search"
-      />
-      <button id="cari" class="btn btn-outline-success" onclick="getCoordinate()">
-        Cari
-      </button>
-      <button id="lokasi" class="btn btn-outline-success" onclick="getLocation()">
-        <img src="https://img.icons8.com/?size=50&id=3723&format=png" alt="location">
-      </button>
-    </div>
+    </nav> -->
+    <div class="d-flex flex-row justify-content-center" role="search">
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-12">
+            <div class="card bg-gradient">
+              <div class="card-body" style="height: 500px;">
+                <div class="container px-4 py-5">
+                  <div class="container border-bottom">
+                    <div class="row">
+                      <div class="col d-flex flex-row justify-content-between align-items-center">
+                        <span class="pb-2" id="nama-kota" style="font-size: 30px; font-weight: bold;">Today Highlight</span>
 
-    <div class="waktu"></div>
-    <div id="current-weather"></div>
-    <div class="container mt-3">
-      <div class="row">
-        <div class="col-12">
-          <div class="card bg-gradient">
-            <div class="card-body">
-              <div class="container px-4 py-5">
-                <h2 class="pb-2 border-bottom" id="nama-kota">Today Highlight</h2>
+                        <div class="d-flex flex-row justify-content-center align-items-center">
+                          <input
+                            id="search-bar"
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Cari Daerah"
+                            aria-label="Search"
+                          />
+                          <button
+                            id="cari"
+                            class="btn btn-outline-success"
+                            onclick="getCoordinate()"
+                          >
+                            Cari
+                          </button>
+                          <button
+                            id="lokasi"
+                            class="btn btn-outline-success"
+                            onclick="getLocation()"
+                          >
+                            <img
+                              src="https://img.icons8.com/?size=50&id=3723&format=png"
+                              alt="location"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <div
                   class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5"
@@ -64,17 +77,25 @@
                   <div class="col d-flex flex-column align-items-start gap-2">
                     <div class="container">
                       <div class="row">
-                        <div class="col-6 ">
-                          <p class="mb-0" id="hari-now">Sabtu, 12 Januari 2025</p>
-                          <p class="mb-0" id="jam">15:00</p>
-                          <h2 id="suhu-now"
+                        <div class="col-6">
+                          <p class="mb-0" id="hari-now" style="font-size: 25px; font-weight: bold;">
+                            Sabtu, 12 Januari 2025
+                          </p>
+                          <p class="mb-0" id="jam" style="font-size: 30px; font-weight: bold;">15:00</p>
+                          <h2
+                            id="suhu-now"
                             class="fw-bold text-body-emphasis"
                             style="font-size: 60px"
                           >
                             32°C
                           </h2>
                         </div>
-                        <div class="col-6 d-flex flex-row justify-content-center align-items-center" id="current-icon">b</div>
+                        <div
+                          class="col-6 d-flex flex-row justify-content-center align-items-center"
+                          id="current-icon"
+                        >
+                          b
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -89,12 +110,10 @@
                             <use xlink:href="#collection"></use>
                           </svg>
                         </div>
-                        <h4 class="fw-semibold mb-0 text-body-emphasis">
+                        <h4 class="fw-semibold mb-0 text-body-emphasis" >
                           Wind Speed
                         </h4>
-                        <p class="text-body-secondary" id="wind-speed">
-                          null
-                        </p>
+                        <p class="text-body-secondary" id="wind-speed" style="font-size: 30px; font-weight: bold;">null</p>
                       </div>
 
                       <div class="col d-flex flex-column gap-2">
@@ -108,9 +127,7 @@
                         <h4 class="fw-semibold mb-0 text-body-emphasis">
                           Surface Pressure
                         </h4>
-                        <p class="text-body-secondary" id="pressure">
-                          null
-                        </p>
+                        <p class="text-body-secondary" id="pressure" style="font-size: 30px; font-weight: bold;">null</p>
                       </div>
 
                       <div class="col d-flex flex-column gap-2">
@@ -121,10 +138,10 @@
                             <use xlink:href="#speedometer"></use>
                           </svg>
                         </div>
-                        <h4 class="fw-semibold mb-0 text-body-emphasis" >
+                        <h4 class="fw-semibold mb-0 text-body-emphasis">
                           Wind Direction
                         </h4>
-                        <p class="text-body-secondary" id="wind-direction">
+                        <p class="text-body-secondary" id="wind-direction" style="font-size: 30px; font-weight: bold;">
                           null
                         </p>
                       </div>
@@ -140,9 +157,7 @@
                         <h4 class="fw-semibold mb-0 text-body-emphasis">
                           Humidity
                         </h4>
-                        <p class="text-body-secondary" id="humidity">
-                          null
-                        </p>
+                        <p class="text-body-secondary" id="humidity" style="font-size: 30px; font-weight: bold;">null</p>
                       </div>
                     </div>
                   </div>
