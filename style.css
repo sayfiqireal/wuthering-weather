@@ -33,7 +33,7 @@ body {
 
 .group-weather {
     height: 300px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: end;
 }
 

@@ -103,7 +103,7 @@ const getWeather = async (latitude, longitude) => {
 };
 
 const getCoordinate = async () => {
-  let name = cari.value;
+  let name =  cari.value || "Bandung";
   cityName.innerText = name;
 
   cari.value = '';
@@ -119,12 +119,13 @@ const getCoordinate = async () => {
   getWeather(latitude, longitude);
 };
 
+getCoordinate();
+
 const getLocation = () => {
-  cityName.innerText = "Yogyakarta";
+  cityName.innerText = 'Yogyakarta';
 
   navigator.geolocation.getCurrentPosition((position) => {
     getWeather(position.coords.latitude, position.coords.longitude);
   });
 };
 
-getLocation();
